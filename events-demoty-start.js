@@ -55,11 +55,15 @@ btn3.addEventListener("click", (event) => {
 
 // TODO: Event preventDefault
 // Prevent form submission
-
 // TODO: Add form submit event listener with preventDefault
 // Submit events fire when a form is submitted
 // preventDefault() stops the default browser behavior (page refresh)
 // This allows you to handle form data with JavaScript instead
+document.querySelector("#demo-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  log("Form submitted! Value: " + event.target.elements["demo-input"].value);
+});
+
 
 // TODO: Event Bubbling and stopPropagation
 // Demonstrate event bubbling
