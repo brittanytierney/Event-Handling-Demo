@@ -41,19 +41,17 @@ document.querySelector("#text-input")
 
 // TODO: Event Object
 // Access event object and use event.target
+// Event object contains details about the event
+// event.target references the specific element that triggered the event
+// TODO: Add event listener that shows which button was clicked
+// Use event.target to identify which specific element triggered the event
+// Event delegation allows handling events on multiple child elements from a parent
+// Check if the clicked element is a button using event.target.tagName
 const btn3 = document.getElementById("btn3");
 btn3.addEventListener("click", (event) => {
   log("Button 3 clicked! Event target id: " + event.target.id);
 });
-// Event object contains details about the event
-// event.target references the specific element that triggered the event
 
-
-// TODO: Add event listener that shows which button was clicked
-// Use event.target to identify which specific element triggered the event
-
-// Event delegation allows handling events on multiple child elements from a parent
-// Check if the clicked element is a button using event.target.tagName
 
 // TODO: Event preventDefault
 // Prevent form submission
