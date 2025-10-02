@@ -72,6 +72,17 @@ document.querySelector("#demo-form").addEventListener("submit", (event) => {
 // Event bubbling means events travel up from child to parent elements
 // Add click listeners to both container and box to see bubbling in action
 // Use stopPropagation() to prevent the event from bubbling up
+const container = document.getElementById("container");
+const box = document.getElementById("box");
+
+container.addEventListener("click", () => {
+  log("Container clicked!");
+});
+
+box.addEventListener("click", (event) => {
+  log("Box clicked!");
+  event.stopPropagation(); // Prevents the event from bubbling up to container
+});   
 
 // TODO: Event Delegation
 // Add new buttons dynamically
